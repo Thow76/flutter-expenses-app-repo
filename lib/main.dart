@@ -30,7 +30,7 @@ class MyHomePage extends StatelessWidget {
             title: Text("Flutter App"),
           ),
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Container(
@@ -40,11 +40,13 @@ class MyHomePage extends StatelessWidget {
                     child: Text("Chart"),
                     elevation: 5,
                   )),
-              Card(
-                child: Text("List of Tx"),
-                color: Colors.blue,
-                elevation: 5,
-              )
+              Column(
+                children: transactions.map((tx) {
+                  return Card(
+                    child: Text(tx.title),
+                  );
+                }).toList(),
+              ),
             ],
           )),
     );
