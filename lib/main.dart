@@ -31,16 +31,25 @@ class MyHomePage extends StatelessWidget {
             title: Text("Flutter App"),
           ),
           body: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            //mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
               Container(
-                  width: double.infinity,
-                  child: Card(
-                    color: Colors.blue,
-                    child: Text("Chart"),
-                    elevation: 5,
-                  )),
+                width: double.infinity,
+                child: Card(
+                  color: Colors.blue,
+                  child: Text("Chart"),
+                  elevation: 5,
+                ),
+              ),
+              Card(
+                child: Column(
+                  children: <Widget>[
+                    TextField(),
+                    TextField(),
+                  ],
+                ),
+              ),
               Column(
                 children: transactions.map((tx) {
                   return Card(
