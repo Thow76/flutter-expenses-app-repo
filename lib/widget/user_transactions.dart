@@ -3,12 +3,12 @@ import './new_transaction.dart';
 import './transaction_list.dart';
 import '../models/transaction.dart';
 
-class _UserTransactionsState extends StatefulWidget {
+class UserTransactions extends StatefulWidget {
   @override
-  State<_UserTransactionsState> createState() => __UserTransactionsStateState();
+  State<UserTransactions> createState() => _UserTransactions();
 }
 
-class __UserTransactionsStateState extends State<_UserTransactionsState> {
+class _UserTransactions extends State<UserTransactions> {
   final List<Transaction> _userTransactions = [
     Transaction(
       id: 't1',
