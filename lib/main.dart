@@ -58,7 +58,6 @@ class _MyHomePageState extends State<MyHomePage> {
         return GestureDetector(
           onTap: () {},
           child: NewTransaction(_addNewTransaction),
-          behavior: HitTestBehavior.opaque,
         );
       },
     );
